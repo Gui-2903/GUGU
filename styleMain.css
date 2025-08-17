@@ -1,0 +1,97 @@
+body {
+    background: #e3f0ff;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.iframe-container {
+    width: 100vw;
+    max-width: 375px;
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+    max-height: 100vh;
+    /* Garante que não ultrapasse a tela */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    /* Arredonda todos os cantos */
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* Alinha o iframe no fim do container */
+    box-sizing: border-box;
+    border: 2px solid #b3c6e6;
+    /* borda azul clara e discreta */
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+.footer {
+    width: 100vw;
+    height: 240px;
+    /* altura do rodapé */
+    background: #e3f0ff;
+    /* azul claro igual ao fundo */
+}
+
+.icone-animado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+}
+
+.mensagem-bemvindo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(123, 159, 184, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.mensagem-conteudo {
+    background: #fff;
+    padding: 32px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.mensagem-conteudo h1 {
+    font-size: 2rem;
+    color: #003cff;
+}
+
+.modal-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+}
