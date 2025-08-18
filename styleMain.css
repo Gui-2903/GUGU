@@ -5,9 +5,9 @@ body {
 }
 
 .iframe-container {
-    width: 300px;
+    width: 90vh;
     /* largura menor */
-    height: 500px;
+    height: 60vh;
     /* altura menor */
     max-width: 90vw;
     /* responsivo para telas pequenas */
