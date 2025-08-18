@@ -1,6 +1,6 @@
 // Inicializando o Zuck.js
 window.onload = function() {
-    document.addEventListener('DOMContentLoaded', function() {
+    //document.addEventListener('DOMContentLoaded', function() {
         const containerDosStories = document.getElementById('storie');
         var stories = new Zuck(containerDosStories, {
             skin: 'snapgram',   // snapgram, facegram, vemde, swipenight
@@ -60,9 +60,11 @@ window.onload = function() {
                 }
             ]
         });
-    });
+   // });
 
-    document.getElementById('mensagem-bemvindo').style.display = 'flex';
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('mensagem-bemvindo').style.display = 'flex';
+    });
 
 }
 
