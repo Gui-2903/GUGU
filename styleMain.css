@@ -45,7 +45,15 @@ iframe {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 16px 0;
+    margin: 32px 0 0 0;
+    transition: margin-top 2s cubic-bezier(.42, 0, .58, 1);
+}
+
+.icone-animado.crescendo {
+    margin-top: 30vh;
+    margin-bottom: 350px;
+    transition: 3s;
+    /* faz o ícone descer para o centro */
 }
 
 .mensagem-bemvindo {
@@ -92,4 +100,10 @@ iframe {
     padding: 16px;
     border-radius: 16px;
     text-align: center;
+}
+
+#icone-gif.crescendo {
+    transition: transform 2s cubic-bezier(.42, 0, .58, 1), width 2s;
+    transform: scale(3.5);
+    z-index: 1000;
 }
