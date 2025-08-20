@@ -10,21 +10,33 @@
 </head>
 
 <body>
-   <!-- <div id="mensagem-bemvindo" class="mensagem-bemvindo">
+
+    <div id="mensagem-bemvindo" class="mensagem-bemvindo">
         <div class="mensagem-conteudo">
             <h1>Bem-vindo </h1>
             <p>clique na cartinha apos fechar aqui</p>
             <button onclick="fecharMensagem()">Fechar</button>
         </div>
-    </div>-->
-    <div class="icone-animado">
-        <img id="icone-gif" src="img/output-onlinegiftools (1).gif" alt="Ícone animado"
-        style="width:100px;cursor:pointer;">
     </div>
+
+
+    <div class="icone-animado">
+        <div class="icone-container">
+            <img id="icone-gif" src="img/output-onlinegiftools (1).gif" alt="Ícone animado"
+            style="width:100px;cursor:pointer;">
+            <div class="img-preta-container">
+                <img class="img-preta" src="img/azul.png" alt="Imagem preta">
+                <img class="fechar-img-preta" src="img/cancelar.png" alt="Fechar">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Container para os elementos animados (corações e flores) -->
+    <div class="elementos-animados"></div>
   
     
     <h1></h1>
-    <div class="iframe-container">
+    <div class="iframe-container" id="destino">
         <iframe src="story.html"></iframe>
     </div>
     <audio id="audio-animado" src="" controls style="display:none;"></audio>
