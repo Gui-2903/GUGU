@@ -67,52 +67,80 @@ window.onload = function () {
 }
 
 // Removidas funções não utilizadas
-
+function fecharMensagem() {
+    const mensagem = document.getElementById('mensagem-bemvindo');
+    mensagem.style.opacity = '0'; // Inicia a transição para invisível
+    setTimeout(() => {
+        mensagem.style.display = 'none'; // Remove do fluxo após a transição
+    }, 3000); // Tempo deve corresponder à transição (3 segundos)
+}
 // Função para criar e animar corações e flores
 function criarElementosAnimados() {
     const elementosContainer = document.querySelector('.elementos-animados');
     elementosContainer.classList.add('mostrar');
     
     // Símbolos para corações e flores
-    const coracoes = ['❤️', '💕', '💖', '💗', '💓' ];
+    const coracoes = ['❤️', '💕', '💖', '💗', '💓','💙' ];
     const flores = ['🌸', '🌺', '🌻', '🌹'];
     
     // Limpa o container antes de adicionar novos elementos
     elementosContainer.innerHTML = '';
     
-    // Cria 15 elementos aleatórios (corações e flores)
-    for (let i = 0; i < 40; i++) {
-        // Decide se é coração ou flor
-        const tipo = Math.random() > 0.5 ? 'coracao' : 'flor';
-        const simbolos = tipo === 'coracao' ? coracoes : flores;
+    // Variável para controlar o loop
+    let loopCount = 0;
+    const maxLoops = 8; // 8 loops x 5 segundos = 40 segundos aproximadamente
+    const loopInterval = 5100; // 5 segundos por loop
+    
+    // Função para criar um conjunto de elementos
+    function criarConjuntoElementos() {
+        // Limpa os elementos anteriores para evitar sobrecarga
+        elementosContainer.innerHTML = '';
         
-        // Cria o elemento
-        const elemento = document.createElement('div');
-        elemento.className = tipo;
-        elemento.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+        // Cria apenas 20 elementos por vez para melhorar o desempenho
+        for (let i = 0; i < 20; i++) {
+            // Decide se é coração ou flor
+            const tipo = Math.random() > 0.5 ? 'coracao' : 'flor';
+            const simbolos = tipo === 'coracao' ? coracoes : flores;
+            
+            // Cria o elemento
+            const elemento = document.createElement('div');
+            // Usa a classe correta para animação (coracao1 ou flor)
+            elemento.className = tipo === 'coracao' ? 'coracao1' : 'flor';
+            elemento.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+            
+            // Posição horizontal aleatória
+            elemento.style.left = Math.random() * 100 + '%';
+            
+            // Atraso aleatório para a animação, mas não muito longo
+            elemento.style.animationDelay = (Math.random() * 2) + 's';
+            
+            // Tamanho aleatório, mas limitado para melhor desempenho
+            const tamanho = Math.random() * 1.5 + 0.8; // Entre 0.8 e 2.3
+            elemento.style.fontSize = (24 * tamanho) + 'px';
+            
+            // Adiciona ao container
+            elementosContainer.appendChild(elemento);
+        }
         
-        // Posição horizontal aleatória
-        elemento.style.left = Math.random() * 100 + '%';
+        loopCount++;
         
-        // Atraso aleatório para a animação
-        elemento.style.animationDelay = (Math.random() * 5) + 's';
-        
-        // Tamanho aleatório
-        const tamanho = Math.random() * 2.5 + 0.8; // Entre 0.8 e 2.3
-        elemento.style.fontSize = (24 * tamanho) + 'px';
-        
-        // Adiciona ao container
-        elementosContainer.appendChild(elemento);
+        // Continua o loop até atingir o tempo máximo (40 segundos)
+        if (loopCount < maxLoops) {
+            setTimeout(criarConjuntoElementos, loopInterval);
+        } else {
+            // Finaliza a animação após 40 segundos
+            setTimeout(function() {
+                elementosContainer.classList.remove('mostrar');
+                // Limpa o container após a animação
+                setTimeout(function() {
+                    elementosContainer.innerHTML = '';
+                }, 500);
+            }, loopInterval);
+        }
     }
     
-    // Remove os elementos após 8 segundos (tempo suficiente para a animação terminar)
-    setTimeout(function() {
-        elementosContainer.classList.remove('mostrar');
-        // Limpa o container após a animação
-        setTimeout(function() {
-            elementosContainer.innerHTML = '';
-        }, 500);
-    }, 8000);
+    // Inicia o primeiro conjunto de elementos
+    criarConjuntoElementos();
 }
 
 // Variáveis de estado globais para melhor performance
@@ -156,6 +184,24 @@ document.addEventListener('DOMContentLoaded', function () {
     fecharImgPreta.addEventListener('click', function(e) {
         e.stopPropagation(); // Impede que o clique se propague para elementos pai
         fecharImagemPreta();
+       
+        const destino = document.getElementById('destino');
+        const inicio = window.scrollY;
+        const fim = destino.getBoundingClientRect().top + window.scrollY;
+        const duracao = 4090; // Duração em milissegundos (1 segundo, ajuste para mais lento, ex.: 2000 para 2 segundos)
+        let inicioTempo = null;
+        function animarScroll(tempoAtual) {
+            if (!inicioTempo) inicioTempo = tempoAtual;
+            const progresso = Math.min((tempoAtual - inicioTempo) / duracao, 1);
+            window.scrollTo(0, inicio + (fim - inicio) * progresso);
+            if (progresso < 1) {
+            requestAnimationFrame(animarScroll);
+            }
+        }
+
+        requestAnimationFrame(animarScroll);
+
+        
     });
     
     icone.addEventListener('click', function () {
@@ -192,15 +238,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 imgPreta.classList.add('crescer');
                 imgPretaAberta = true;
                 
+                // Chama a função para criar e animar corações e flores
+                criarElementosAnimados();
                 // Adiciona a classe 'renderizada' após um tempo reduzido
                 setTimeout(function() {
                     imgPretaContainer.classList.add('renderizada');
-                    // Chama a função para criar e animar corações e flores
-                    criarElementosAnimados();
-                    criarElementosAnimados();
-                    criarElementosAnimados();
-                    criarElementosAnimados();
-                }, 800); // Tempo reduzido para aparecer botão x
+                }, 3000); // Tempo para aparecer botão x
             }, 1000); // Tempo reduzido
 
         } else {

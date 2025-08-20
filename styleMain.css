@@ -7,7 +7,7 @@ body {
 .iframe-container {
     width: 90vh;
     /* largura menor */
-    height: 60vh;
+    height: 80vh;
     /* altura menor */
     max-width: 90vw;
     /* responsivo para telas pequenas */
@@ -35,7 +35,7 @@ iframe {
 
 .footer {
     width: 100vw;
-    height: 240px;
+    height: 70px;
     /* altura do rodapé */
     background: #e3f0ff;
     /* azul claro igual ao fundo */
@@ -61,24 +61,56 @@ iframe {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(123, 159, 184, 0.85);
+    background: rgba(123, 159, 184, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    transition: opacity 2s ease, backdrop-filter 2s ease; /* Adiciona transição para backdrop-filter */
+    opacity: 1; /* Estado inicial visível */
+}
+
+.mensagem-bemvindo[style*="opacity: 0"] {
+    backdrop-filter: blur(0px); /* Remove o blur quando opacidade chega a 0 */
+    -webkit-backdrop-filter: blur(0px);
 }
 
 .mensagem-conteudo {
-    background: #fff;
-    padding: 32px;
-    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 24px;
+    border-radius: 16px;
     text-align: center;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .mensagem-conteudo h1 {
-    font-size: 2rem;
-    color: #003cff;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.mensagem-conteudo p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.mensagem-conteudo button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.mensagem-conteudo button:hover {
+    background: #0056b3;
 }
 
 .modal-img {
@@ -165,13 +197,14 @@ iframe {
 
 .fechar-img-preta {
     position: absolute;
-    top: -150px;
+    top: -145px;
     right: -140px;
     width: 25px;
     height: 25px;
     cursor: pointer;
     opacity: 0;
-    transition: opacity 3s ease, transform 3s ease;
+    transition: opacity 3s ease, transform 5s ;
+    
 }
 
 .fechar-img-preta:hover {
@@ -188,7 +221,8 @@ iframe {
 /* Mostra o botão de fechar apenas quando a imagem preta estiver totalmente renderizada */
 .img-preta-container.mostrar.renderizada .fechar-img-preta {
     opacity: 1;
-    transition: 0s;
+    transition: opacity 3s ease;
+    
 }
 
 /* Container para os elementos animados (corações e flores) */
@@ -207,8 +241,8 @@ iframe {
     display: block;
 }
 
-/* Estilos para os corações */
-.coracao {
+/* Estilos para os corações - otimizados para desempenho */
+.coracao1 {
     position: absolute;
     bottom: -50px;
     color: #ff5a79;
@@ -216,9 +250,10 @@ iframe {
     opacity: 0;
     transform: scale(0);
     animation: subir 4s ease-in-out forwards;
+    will-change: transform, opacity, bottom;
 }
 
-/* Estilos para as flores */
+/* Estilos para as flores - otimizados para desempenho */
 .flor {
     position: absolute;
     bottom: -50px;
@@ -227,20 +262,21 @@ iframe {
     opacity: 0;
     transform: scale(0);
     animation: subir 4s ease-in-out forwards;
+    will-change: transform, opacity, bottom;
 }
 
-/* Animação para fazer os elementos subirem */
+/* Animação para fazer os elementos subirem - otimizada para desempenho */
 @keyframes subir {
     0% {
         transform: scale(0);
         opacity: 0;
         bottom: -50px;
     }
-    10% {
+    15% {
         transform: scale(1);
         opacity: 1;
     }
-    90% {
+    85% {
         opacity: 1;
     }
     100% {
