@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+#stories {
+    max-width: 600px;
+    margin: 30px auto;
+
+}
+
+/* Para garantir que as imagens fiquem circulares */
+.story img {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    /* Mantém proporção 9:16 */
+    object-fit: cover;
+    /* Preenche o espaço sem distorcer */
+    border-radius: 50%;
+    display: block;
+}

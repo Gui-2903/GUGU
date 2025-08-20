@@ -1,0 +1,251 @@
+body {
+    background: #e3f0ff;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.iframe-container {
+    width: 90vh;
+    /* largura menor */
+    height: 60vh;
+    /* altura menor */
+    max-width: 90vw;
+    /* responsivo para telas pequenas */
+    max-height: 80vh;
+    /* responsivo para telas pequenas */
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid #b3c6e6;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+.footer {
+    width: 100vw;
+    height: 240px;
+    /* altura do rodapé */
+    background: #e3f0ff;
+    /* azul claro igual ao fundo */
+}
+
+.icone-animado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 0 0;
+    transition: margin-top 2s cubic-bezier(.42, 0, .58, 1), margin-bottom 2s cubic-bezier(.42, 0, .58, 1);
+}
+
+.icone-animado.crescendo {
+    margin-top: 36vh;
+    margin-bottom: 450px;
+    /* faz o ícone descer para o centro */
+}
+
+.mensagem-bemvindo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(123, 159, 184, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.mensagem-conteudo {
+    background: #fff;
+    padding: 32px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.mensagem-conteudo h1 {
+    font-size: 2rem;
+    color: #003cff;
+}
+
+.modal-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 16px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+#icone-gif {
+    transition: transform 0.8s cubic-bezier(.42, 0, .58, 1), width 0.8s;
+}
+
+#icone-gif.crescendo {
+    transform: scale(3.5);
+    z-index: 1000;
+    margin-bottom: 22px;
+}
+
+.icone-container {
+    position: relative;
+    display: inline-block;
+}
+
+.img-preta-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1001;
+    pointer-events: none;
+}
+
+.img-preta-container.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.img-preta {
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+    transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), height 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+    display: block;
+    will-change: transform, width, height;
+    transform-origin: center center;
+}
+
+/* Transição mais rápida para o encolhimento */
+.img-preta.crescer.encolhendo {
+    transform: scale(1);
+    width: 40px;
+    height: 40px;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Classe de preparação para a animação - mais rápida */
+.img-preta.pre-crescer {
+    /* Prepara a imagem para a animação */
+    transform: scale(1.05);
+    transition: transform 1.3s ease-out;
+}
+
+.img-preta.crescer {
+    transform: scale(5);
+    width: 80px;
+    height: 80px;
+}
+
+.fechar-img-preta {
+    position: absolute;
+    top: -150px;
+    right: -140px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+.fechar-img-preta:hover {
+    transform: scale(1.2);
+    
+}
+
+.img-preta-container.mostrar .fechar-img-preta {
+    opacity: 0;
+    transition: 0s;
+    /* Inicialmente escondido mesmo quando o container está visível */
+}
+
+/* Mostra o botão de fechar apenas quando a imagem preta estiver totalmente renderizada */
+.img-preta-container.mostrar.renderizada .fechar-img-preta {
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Container para os elementos animados (corações e flores) */
+.elementos-animados {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite clicar através dos elementos */
+    z-index: 1002; /* Acima da imagem preta */
+    display: none; /* Inicialmente escondido */
+}
+
+.elementos-animados.mostrar {
+    display: block;
+}
+
+/* Estilos para os corações */
+.coracao {
+    position: absolute;
+    bottom: -50px;
+    color: #ff5a79;
+    font-size: 24px;
+    opacity: 0;
+    transform: scale(0);
+    animation: subir 4s ease-in-out forwards;
+}
+
+/* Estilos para as flores */
+.flor {
+    position: absolute;
+    bottom: -50px;
+    color: #4dcaff;
+    font-size: 24px;
+    opacity: 0;
+    transform: scale(0);
+    animation: subir 4s ease-in-out forwards;
+}
+
+/* Animação para fazer os elementos subirem */
+@keyframes subir {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+        bottom: -50px;
+    }
+    10% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+        bottom: 110%;
+    }
+}
