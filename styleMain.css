@@ -1,7 +1,12 @@
+/* Importando fontes mais cheias e destacáveis do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+
 body {
     background: #e3f0ff;
     margin: 0;
     min-height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
 }
 
 .iframe-container {
@@ -39,6 +44,17 @@ iframe {
     /* altura do rodapé */
     background: #e3f0ff;
     /* azul claro igual ao fundo */
+    font-family: 'Nunito', sans-serif;
+}
+
+.footer h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #5a7285;
+    text-align: center;
+    padding-top: 25px;
+    letter-spacing: 0.5px;
 }
 
 .icone-animado {
@@ -88,25 +104,43 @@ iframe {
 }
 
 .mensagem-conteudo h1 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #4a6fa5;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 .mensagem-conteudo p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #5a7285;
+    margin-bottom: 18px;
+    line-height: 1.5;
 }
 
 .mensagem-conteudo button {
-    padding: 8px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #4a90e2;
+    color: white;
     border: none;
-    border-radius: 8px;
-    background: #007bff;
-    color: #fff;
+    border-radius: 25px;
+    padding: 10px 24px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.5px;
+}
+
+.mensagem-conteudo button:hover {
+    background-color: #3a7bc8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .mensagem-conteudo button:hover {
@@ -165,8 +199,8 @@ iframe {
 }
 
 .img-preta {
-    width: 40px;
-    height: 40px;
+    width: 50%;
+    height: 40%;
     border-radius: 10%;
     transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), width 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), height 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
     display: block;

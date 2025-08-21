@@ -1,12 +1,22 @@
+/* Importando fontes mais cheias e destacáveis do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Nunito', sans-serif;
     background: #f0f2f5;
     margin: 0;
     padding: 20px;
+    font-weight: 500;
 }
 
 h1 {
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #4a6fa5;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 
@@ -25,4 +35,41 @@ h1 {
     /* Preenche o espaço sem distorcer */
     border-radius: 50%;
     display: block;
+}
+
+/* Estilização para todos os textos */
+p, span, div, button, a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+}
+
+/* Estilização para todos os títulos */
+h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #4a6fa5;
+}
+.time {
+            display: none !important;
+        }
+
+/* Container da imagem com iframe 
+
+/* Estilização da imagem eu+ela */
+.eu\+ela {
+    max-width: 100%;
+    width: 95%;
+    margin-top: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10%;
+    border-radius: 10px;
+    box-shadow: 0 5px 9px rgba(42, 185, 233, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eu\+ela:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
