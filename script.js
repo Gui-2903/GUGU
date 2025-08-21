@@ -34,7 +34,7 @@ window.onload = function () {
                         id: "story2",
                         type: "photo",
                         length: 5,
-                        src: "img/FT-j/cruze/Captura de tela 2025-08-20 201947.png",
+                        src: "img/FT-j/EU ELA/eu ela.jpg",
                         preview: "img/FT-j/cruze/Captura de tela 2025-08-20 201947.png",
                         seen: false,
                         time: null,
