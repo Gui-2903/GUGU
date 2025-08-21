@@ -801,6 +801,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         if (!tocando) {
             // Se não estiver tocando, inicia a reprodução e adiciona as classes
+            audio.currentTime = 11;
             audio.play();
             icone.classList.add('crescendo');
             container.classList.add('crescendo');
