@@ -34,7 +34,7 @@ window.onload = function () {
                         id: "story2",
                         type: "photo",
                         length: 5,
-                        src: "img/FT-j/EU ELA/eu ela.jpg",
+                        src: "img/FT-j/cruze/Captura de tela 2025-08-20 201947.png",
                         preview: "img/FT-j/cruze/Captura de tela 2025-08-20 201947.png",
                         seen: false,
                         time: null,
@@ -237,7 +237,7 @@ window.onload = function () {
                         id: "story_eu_ela2",
                         type: "photo",
                         length: 5,
-                        src: "img/FT-j/EU ELA/Imagem do WhatsApp de 2025-08-20 à(s) 20.25.02_4a23b14a.jpg",
+                        src: "img/FT-j/EU ELA/eu + ela.jpg",
                         preview: "img/FT-j/EU ELA/Imagem do WhatsApp de 2025-08-20 à(s) 20.25.02_4a23b14a.jpg",
                         seen: false,
                         time: 2
@@ -630,6 +630,26 @@ function fecharMensagem() {
         mensagem.style.display = 'none'; // Remove do fluxo após a transição
     }, 500); // Tempo deve corresponder à transição (3 segundos)
 }
+
+
+// Função para mostrar o botão de fechar após 4 segundos com transição suave
+document.addEventListener('DOMContentLoaded', function() {
+    const botaoFechar = document.querySelector('.mensagem-conteudo button');
+    if (botaoFechar) {
+        // Inicialmente esconde o botão (já está definido no CSS)
+        botaoFechar.style.transform = 'scale(0.8)';
+        
+        // Mostra o botão após 4 segundos com transição suave
+        setTimeout(() => {
+            botaoFechar.style.opacity = '1';
+            botaoFechar.style.transform = 'scale(1)';
+        }, 4000);
+    }
+})
+
+
+
+
 // Função para criar e animar corações e flores
 function criarElementosAnimados() {
     const elementosContainer = document.querySelector('.elementos-animados');
@@ -744,7 +764,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const destino = document.getElementById('destino');
         const inicio = window.scrollY;
         const fim = destino.getBoundingClientRect().top + window.scrollY;
-        const duracao = 4090; // Duração em milissegundos (1 segundo, ajuste para mais lento, ex.: 2000 para 2 segundos)
+        const duracao = 3090; // Duração em milissegundos (1 segundo, ajuste para mais lento, ex.: 2000 para 2 segundos)
         let inicioTempo = null;
         function animarScroll(tempoAtual) {
             if (!inicioTempo) inicioTempo = tempoAtual;
