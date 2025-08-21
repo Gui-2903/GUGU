@@ -745,6 +745,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Adiciona a classe de encolhimento imediatamente
         imgPreta.classList.add('encolhendo');
         imgPreta.classList.remove('crescer');
+        document.getElementById("destino").classList.add("active");
         
         // Aguarda apenas o tempo necessário para a animação de encolhimento
         setTimeout(function() {

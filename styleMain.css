@@ -28,6 +28,9 @@ body {
     align-items: center;
     box-sizing: border-box;
     border: 2px solid #b3c6e6;
+    filter: blur(8px);       /* 🔹 deixa borrado */
+    pointer-events: none;
+    transition: filter 0.5s ease;
 }
 
 iframe {
@@ -37,6 +40,12 @@ iframe {
     display: block;
     box-sizing: border-box;
 }
+
+.iframe-container.active {
+    filter: none;            /* 🔹 sem blur */
+    pointer-events: auto;    /* 🔹 ativa clique dentro do iframe */
+  }
+
 
 .footer {
     width: 100vw;
