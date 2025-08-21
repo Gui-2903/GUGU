@@ -385,6 +385,177 @@ window.onload = function () {
                         preview: "img/FT-j/EU ELA/Imagem do WhatsApp de 2025-08-20 à(s) 20.25.11_ff110256.jpg",
                         seen: false,
                         time: 18
+                    },
+                    {
+                        id: "story_eu_ela_ju1",
+                        type: "photo",
+                        length: 5,
+                        src: "img/FT-j/EU ELA/Ju/IMG-20250512-WA0054.jpg",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250512-WA0054.jpg",
+                        seen: false,
+                        time: 19
+                    },
+                    {
+                        id: "story_eu_ela_ju2",
+                        type: "photo",
+                        length: 5,
+                        src: "img/FT-j/EU ELA/Ju/IMG-20250527-WA0027.jpg",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250527-WA0027.jpg",
+                        seen: false,
+                        time: 20
+                    },
+                    {
+                        id: "story_eu_ela_ju3",
+                        type: "photo",
+                        length: 5,
+                        src: "img/FT-j/EU ELA/Ju/IMG-20250530-WA0006.jpg",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250530-WA0006.jpg",
+                        seen: false,
+                        time: 21
+                    },
+                    {
+                        id: "story_eu_ela_ju4",
+                        type: "photo",
+                        length: 5,
+                        src: "img/FT-j/EU ELA/Ju/IMG-20250617-WA0213.jpg",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250617-WA0213.jpg",
+                        seen: false,
+                        time: 22
+                    },
+                    {
+                        id: "story_eu_ela_ju5",
+                        type: "photo",
+                        length: 5,
+                        src: "img/FT-j/EU ELA/Ju/IMG-20250622-WA0075.jpg",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250622-WA0075.jpg",
+                        seen: false,
+                        time: 23
+                    },
+                    {
+                        id: "story_eu_ela_ju6",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20241013-WA0006.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250512-WA0054.jpg",
+                        seen: false,
+                        time: 24
+                    },
+                    {
+                        id: "story_eu_ela_ju7",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250216-WA0000.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250527-WA0027.jpg",
+                        seen: false,
+                        time: 25
+                    },
+                    {
+                        id: "story_eu_ela_ju8",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250319-WA0008.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250530-WA0006.jpg",
+                        seen: false,
+                        time: 26
+                    },
+                    {
+                        id: "story_eu_ela_ju9",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250322-WA0068.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250617-WA0213.jpg",
+                        seen: false,
+                        time: 27
+                    },
+                    {
+                        id: "story_eu_ela_ju10",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250403-WA0001.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250622-WA0075.jpg",
+                        seen: false,
+                        time: 28
+                    },
+                    {
+                        id: "story_eu_ela_ju11",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250406-WA0002.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250512-WA0054.jpg",
+                        seen: false,
+                        time: 29
+                    },
+                    {
+                        id: "story_eu_ela_ju12",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250416-WA0000.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250527-WA0027.jpg",
+                        seen: false,
+                        time: 30
+                    },
+                    {
+                        id: "story_eu_ela_ju13",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250416-WA0001.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250530-WA0006.jpg",
+                        seen: false,
+                        time: 31
+                    },
+                    {
+                        id: "story_eu_ela_ju14",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250427-WA0001.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250617-WA0213.jpg",
+                        seen: false,
+                        time: 32
+                    },
+                    {
+                        id: "story_eu_ela_ju15",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250529-WA0000.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250622-WA0075.jpg",
+                        seen: false,
+                        time: 33
+                    },
+                    {
+                        id: "story_eu_ela_ju16",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250618-WA0281.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250512-WA0054.jpg",
+                        seen: false,
+                        time: 34
+                    },
+                    {
+                        id: "story_eu_ela_ju17",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250618-WA0292.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250527-WA0027.jpg",
+                        seen: false,
+                        time: 35
+                    },
+                    {
+                        id: "story_eu_ela_ju18",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250618-WA0293.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250530-WA0006.jpg",
+                        seen: false,
+                        time: 36
+                    },
+                    {
+                        id: "story_eu_ela_ju19",
+                        type: "video",
+                        length: 10,
+                        src: "img/FT-j/EU ELA/Ju/VID-20250618-WA0298.mp4",
+                        preview: "img/FT-j/EU ELA/Ju/IMG-20250617-WA0213.jpg",
+                        seen: false,
+                        time: 37
                     }
                 ]
             },
@@ -722,7 +893,7 @@ function criarElementosAnimados() {
 // Variáveis de estado globais para melhor performance
 let tocando = false;
 let imgPretaAberta = false;
-let icone, container, audio, imgPreta, imgPretaContainer, fecharImgPreta;
+let icone, container, audio, imgPreta, imgPretaContainer, fecharImgPreta, mensagemIframe;
 
 // Inicializa os elementos quando o DOM estiver pronto
 document.addEventListener('DOMContentLoaded', function () {
@@ -734,6 +905,12 @@ document.addEventListener('DOMContentLoaded', function () {
     imgPretaContainer = document.querySelector('.img-preta-container');
     fecharImgPreta = document.querySelector('.fechar-img-preta');
     borrado = document.querySelector('.iframe-container');
+    mensagemIframe = document.querySelector('.mensagem-iframe');
+    
+    // Define o texto inicial da mensagem
+    if (mensagemIframe) {
+        mensagemIframe.textContent = "Clique na carta primeiro";
+    }
     
     
     // Define o caminho do arquivo de áudio
@@ -748,6 +925,11 @@ document.addEventListener('DOMContentLoaded', function () {
         imgPreta.classList.add('encolhendo');
         imgPreta.classList.remove('crescer');
         borrado.classList.add("active");
+        
+        // Esconde a mensagem do iframe quando o iframe é desbloqueado
+        if (mensagemIframe) {
+            mensagemIframe.style.display = 'none';
+        }
         
         // Aguarda apenas o tempo necessário para a animação de encolhimento
         setTimeout(function() {
@@ -793,6 +975,14 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 icone.classList.remove('crescendo');
                 container.classList.remove('crescendo');
+                
+                // Restaura a mensagem inicial quando o ícone volta ao tamanho normal
+                if (mensagemIframe) {
+                    setTimeout(function() {
+                        mensagemIframe.style.display = '';
+                        mensagemIframe.textContent = "Clique na carta primeiro";
+                    }, 500);
+                }
             }, 300); // Tempo reduzido drasticamente
             
             tocando = false;
@@ -818,6 +1008,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 imgPreta.classList.add('crescer');
                 imgPretaAberta = true;
                 
+                // Atualiza o texto da mensagem do iframe
+                if (mensagemIframe) {
+                    mensagemIframe.textContent = "Clique no 'X' da foto acima para desbloquear";
+                }
+                
                 // Chama a função para criar e animar corações e flores
                 criarElementosAnimados();
                 // Adiciona a classe 'renderizada' após um tempo reduzido
@@ -835,6 +1030,14 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(function() {
                 icone.classList.remove('crescendo');
                 container.classList.remove('crescendo');
+                
+                // Restaura a mensagem inicial quando o ícone volta ao tamanho normal
+                if (mensagemIframe) {
+                    setTimeout(function() {
+                        mensagemIframe.style.display = '';
+                        mensagemIframe.textContent = "Clique na carta primeiro";
+                    }, 500);
+                }
             }, 300); // Tempo reduzido drasticamente
             
             tocando = false;
