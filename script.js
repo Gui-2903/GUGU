@@ -733,6 +733,8 @@ document.addEventListener('DOMContentLoaded', function () {
     imgPreta = document.querySelector('.img-preta');
     imgPretaContainer = document.querySelector('.img-preta-container');
     fecharImgPreta = document.querySelector('.fechar-img-preta');
+    borrado = document.querySelector('.iframe-container');
+    
     
     // Define o caminho do arquivo de áudio
     audio.src = 'img/Belo - Reinventar (Áudio Oficial).mp3';
@@ -745,7 +747,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Adiciona a classe de encolhimento imediatamente
         imgPreta.classList.add('encolhendo');
         imgPreta.classList.remove('crescer');
-        document.getElementById("destino").classList.add("active");
+        borrado.classList.add("active");
         
         // Aguarda apenas o tempo necessário para a animação de encolhimento
         setTimeout(function() {
