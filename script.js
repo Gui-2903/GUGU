@@ -656,15 +656,15 @@ function criarElementosAnimados() {
     elementosContainer.classList.add('mostrar');
     
     // Símbolos para corações e flores
-    const coracoes = ['❤️', '💕', '💖', '💗', '💓','💙' ];
-    const flores = ['🌸', '🌺', '🌻', '🌹'];
+    const coracoes = ['❤️', '💕', '💖', '💗', '💓','💙','💙','💙','💙' ];
+    const flores = ['🌸', '🌺', '🌻','🌻','🌻', '🌹'];
     
     // Limpa o container antes de adicionar novos elementos
     elementosContainer.innerHTML = '';
     
     // Variável para controlar o loop
     let loopCount = 0;
-    const maxLoops = 8; // 8 loops x 5 segundos = 40 segundos aproximadamente
+    const maxLoops = 13; // 13 loops x 5 segundos = 65 segundos aproximadamente
     const loopInterval = 5100; // 5 segundos por loop
     
     // Função para criar um conjunto de elementos
